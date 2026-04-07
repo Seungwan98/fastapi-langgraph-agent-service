@@ -1,0 +1,11 @@
+data/
+tests/fixtures/
+.venv/
+venv/
+.pytest_cache/
+.git/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+*.pyo
