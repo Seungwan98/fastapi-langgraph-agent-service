@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     )
     rag_enabled: bool = Field(default=False, alias="RAG_ENABLED")
     rag_index_path: str = Field(default="data/rag_index.json", alias="RAG_INDEX_PATH")
-    rag_source_dir: str = Field(default="docs/knowledge", alias="RAG_SOURCE_DIR")
+    rag_source_dir: str = Field(default="knowledge-base", alias="RAG_SOURCE_DIR")
     rag_embedding_model: str = Field(default="text-embedding-3-small", alias="RAG_EMBEDDING_MODEL")
     rag_top_k: int = Field(default=4, alias="RAG_TOP_K")
     rag_min_score: float = Field(default=0.2, alias="RAG_MIN_SCORE")

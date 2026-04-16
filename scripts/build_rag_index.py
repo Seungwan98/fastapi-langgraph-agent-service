@@ -7,7 +7,7 @@ from app.services.retriever import build_rag_index
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Build a JSON RAG index from local documents.")
-    parser.add_argument("--input-dir", default="docs/knowledge", help="Directory containing markdown/text knowledge files")
+    parser.add_argument("--input-dir", default="knowledge-base", help="Directory containing markdown/text knowledge files")
     parser.add_argument("--output", default="data/rag_index.json", help="Output JSON index path")
     parser.add_argument("--embedding-model", default="text-embedding-3-small", help="OpenAI embedding model")
     parser.add_argument("--chunk-size", type=int, default=800, help="Characters per chunk")

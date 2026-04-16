@@ -78,7 +78,7 @@ OPENAI_MODEL=gpt-4o-mini
 CHECKPOINT_DB_PATH=data/agent_checkpoints.sqlite
 RAG_ENABLED=false
 RAG_INDEX_PATH=data/rag_index.json
-RAG_SOURCE_DIR=docs/knowledge
+RAG_SOURCE_DIR=knowledge-base
 RAG_EMBEDDING_MODEL=text-embedding-3-small
 RAG_TOP_K=4
 RAG_MIN_SCORE=0.2
@@ -109,10 +109,10 @@ npm run dev -- --host 127.0.0.1 --port 5173
 ### RAG 인덱스 생성
 
 ```bash
-python3 scripts/build_rag_index.py --input-dir docs/knowledge --output data/rag_index.json
+python3 scripts/build_rag_index.py --input-dir knowledge-base --output data/rag_index.json
 ```
 
-`docs/knowledge/` 아래에 큐레이션된 참고 문서를 넣고, 런타임에서는 `RAG_ENABLED=true`로 활성화합니다. 기본 예시 문서도 함께 포함되어 있습니다. 후속 질문 검색 품질은 `RAG_HISTORY_TURNS`로 조절할 수 있고, 필요하면 `RAG_QUERY_REWRITE_ENABLED=true`로 LLM 기반 질의 재작성도 켤 수 있습니다.
+`knowledge-base/` 아래에 큐레이션된 참고 문서를 넣고, 런타임에서는 `RAG_ENABLED=true`로 활성화합니다. 기본 예시 문서도 함께 포함되어 있습니다. 후속 질문 검색 품질은 `RAG_HISTORY_TURNS`로 조절할 수 있고, 필요하면 `RAG_QUERY_REWRITE_ENABLED=true`로 LLM 기반 질의 재작성도 켤 수 있습니다.
 
 ## 배포 주소
 
