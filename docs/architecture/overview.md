@@ -204,7 +204,7 @@ SQLite Checkpoint 저장
     "retrieved_sources": [
       {
         "chunk_id": "faq-chunk-1",
-        "source": "docs/knowledge/faq.md",
+        "source": "knowledge-base/faq.md",
         "title": "FAQ",
         "score": 0.91
       }
