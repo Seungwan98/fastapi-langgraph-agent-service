@@ -57,7 +57,7 @@ def test_knowledge_retriever_returns_ranked_sources(monkeypatch, tmp_path):
                 "documents": [
                     {
                         "id": "doc-1",
-                        "source": "docs/knowledge/chest.md",
+            "source": "knowledge-base/chest.md",
                         "title": "Chest Guidance",
                         "content": "Seek urgent care if chest pain is severe.",
                         "embedding": [1.0, 0.0],
@@ -67,7 +67,7 @@ def test_knowledge_retriever_returns_ranked_sources(monkeypatch, tmp_path):
                     },
                     {
                         "id": "doc-2",
-                        "source": "docs/knowledge/stress.md",
+            "source": "knowledge-base/stress.md",
                         "title": "Stress Guidance",
                         "content": "Slow breathing can reduce anxiety symptoms.",
                         "embedding": [0.0, 1.0],
@@ -99,7 +99,7 @@ def test_knowledge_retriever_returns_ranked_sources(monkeypatch, tmp_path):
     metadata = retriever.to_source_metadata(results)
     assert metadata[0] == {
         "chunk_id": "doc-1",
-        "source": "docs/knowledge/chest.md",
+            "source": "knowledge-base/chest.md",
         "title": "Chest Guidance",
         "score": 0.75,
         "type": "red_flag",
@@ -108,7 +108,7 @@ def test_knowledge_retriever_returns_ranked_sources(monkeypatch, tmp_path):
     }
     assert metadata[1] == {
         "chunk_id": "doc-2",
-        "source": "docs/knowledge/stress.md",
+            "source": "knowledge-base/stress.md",
         "title": "Stress Guidance",
         "score": 0.32,
         "type": "anxiety_support",
@@ -146,7 +146,7 @@ def test_metadata_policy_prefers_reassuring_doc_for_non_red_flag_query(monkeypat
                 "documents": [
                     {
                         "id": "doc-red",
-                        "source": "docs/knowledge/urgent.md",
+            "source": "knowledge-base/urgent.md",
                         "title": "Urgent Guidance",
                         "content": "Chest pain with shortness of breath needs urgent care.",
                         "embedding": [1.0, 0.0],
@@ -156,7 +156,7 @@ def test_metadata_policy_prefers_reassuring_doc_for_non_red_flag_query(monkeypat
                     },
                     {
                         "id": "doc-calm",
-                        "source": "docs/knowledge/anxiety.md",
+            "source": "knowledge-base/anxiety.md",
                         "title": "Anxiety Support",
                         "content": "Stress and muscle tension often cause chest tightness and can improve with slower breathing.",
                         "embedding": [0.96, 0.04],

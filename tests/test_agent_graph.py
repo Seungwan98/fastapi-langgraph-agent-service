@@ -82,7 +82,7 @@ def test_build_answer_prompt_messages_includes_health_anxiety_harness_and_contex
             object,
             {
                 "messages": [HumanMessage(content="I have a headache and I am scared it is a brain tumor.")],
-                "retrieved_context": "[source 1]\nsource: docs/knowledge/health-anxiety-support.md\ncontent:\nHeadaches are often caused by stress, dehydration, or fatigue.",
+        "retrieved_context": "[source 1]\nsource: knowledge-base/health-anxiety-support.md\ncontent:\nHeadaches are often caused by stress, dehydration, or fatigue.",
             },
         ),
     )
@@ -135,13 +135,13 @@ def test_retrieve_node_merges_local_public_and_fhir_sources():
 
     class LocalRetriever:
         def search(self, query: str):
-            return [SimpleNamespace(chunk_id="local-1", source="docs/knowledge/health.md", title="Health", content="Grounded chunk", score=0.7, doc_type="symptom", severity="medium", intent="educate")]
+            return [SimpleNamespace(chunk_id="local-1", source="knowledge-base/health.md", title="Health", content="Grounded chunk", score=0.7, doc_type="symptom", severity="medium", intent="educate")]
 
         def build_context(self, chunks):
             return "[source 1]\ncontent:\nGrounded chunk"
 
         def to_source_metadata(self, chunks):
-            return [{"chunk_id": "local-1", "source": "docs/knowledge/health.md", "title": "Health", "score": 0.7, "source_kind": "knowledge"}]
+            return [{"chunk_id": "local-1", "source": "knowledge-base/health.md", "title": "Health", "score": 0.7, "source_kind": "knowledge"}]
 
     class PublicLookup:
         def lookup(self, query: str):

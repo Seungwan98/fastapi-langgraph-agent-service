@@ -104,7 +104,7 @@ def test_agent_invoke_includes_retrieval_metadata(monkeypatch):
         retrieved_sources=[
             {
                 "chunk_id": "faq-chunk-1",
-                "source": "docs/knowledge/faq.md",
+                    "source": "knowledge-base/faq.md",
                 "title": "FAQ",
                 "score": 0.91,
                 "source_kind": "knowledge",
