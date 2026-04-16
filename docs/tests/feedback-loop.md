@@ -56,7 +56,7 @@ pytest -q
 아래를 수동 또는 grep으로 확인한다.
 - README 문서 링크가 실제 경로를 가리키는가
 - AGENTS.md가 새 rules/tests 경로를 가리키는가
-- `docs/knowledge/` 경로가 유지되는가
+- `knowledge-base/` 경로가 유지되는가
 - 이동된 문서 간 내부 링크가 끊기지 않았는가
 
 예시 명령:

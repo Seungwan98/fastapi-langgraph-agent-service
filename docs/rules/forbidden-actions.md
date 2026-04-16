@@ -14,7 +14,7 @@
 
 ## Data / Privacy
 - `.env`, API key, bearer token, patient identifier를 문서/fixture/로그에 하드코딩하지 않는다.
-- 실제 PHI/민감정보를 `docs/knowledge/`, `data/`, `tests/fixtures`에 저장하지 않는다.
+- 실제 PHI/민감정보를 `knowledge-base/`, `data/`, `tests/fixtures`에 저장하지 않는다.
 
 ## Dependency / State
 - import 시점에 network call, DB open, index build를 실행하지 않는다.
@@ -22,6 +22,6 @@
 - ad-hoc singleton을 추가하지 않는다.
 
 ## Docs / Repo Hygiene
-- `docs/knowledge/`에 운영 문서를 넣지 않는다.
+- `knowledge-base/`에 운영 문서를 넣지 않는다.
 - 문서 재배치 후 README/AGENTS 경로를 갱신하지 않은 채 두지 않는다.
 - 테스트가 깨졌는데 문서만 맞다고 완료 처리하지 않는다.

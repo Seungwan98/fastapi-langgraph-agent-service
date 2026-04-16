@@ -66,7 +66,7 @@
 - `docs/operations/` — 배포/운영
 - `docs/data/` — 데이터/평가
 - `docs/diagrams/` — 시각화
-- `docs/knowledge/` — RAG 문서만 저장
+- `knowledge-base/` — RAG 문서만 저장
 
 ## Implementation Rules
 
