@@ -61,11 +61,11 @@ _AMBER_PATTERNS = [
     (r"\b(high\s+fever|fever\s+for\s+\d+\s*days?)\b", "persistent fever pattern"),
     (r"\b(severe\s+abdominal\s+pain|blood\s+in\s+stool|blood\s+in\s+urine)\b", "possible urgent physical symptom"),
     (r"\b(persistent\s+vomiting|fainting|passed\s+out)\b", "possible urgent physical symptom"),
-    (r"\b(고열|열이\s*\d+일\s*째|지속되는\s*열)\b", "persistent fever pattern"),
-    (r"\b(심한\s*복통|혈변|혈뇨|실신|기절|계속\s*구토)\b", "possible urgent physical symptom"),
+    (r"(고열(?=$|[\s.,!?]|[이가은는을를도만에로와과])|열이\s*(?:\d+일\s*째|사흘째)|지속되는\s*열)", "persistent fever pattern"),
+    (r"(심한\s*복통|혈변|혈뇨|실신[가-힣]*|기절[가-힣]*|계속\s*구토)", "possible urgent physical symptom"),
     (r"\b(bypass|exploit|payload|privilege\s+escalation|sql\s+injection)\b", "suspicious security language"),
     (r"\b(allergic\s+reaction|swelling\s+of\s+(throat|face|tongue)|difficulty\s+swallowing)\b", "possible allergic reaction"),
-    (r"(알레르기\s*반응|목\s*부종|얼굴\s*부종|혀\s*부종|삼키기\s*어려|음식\s*알레르기)", "possible allergic reaction"),
+    (r"(알레르기\s*반응|목\s*부종|얼굴\s*부종|혀\s*부종|목\s*이?\s*부(?:어|었)|혀\s*(?:가|이)?\s*붓[가-힣]*|얼굴\s*(?:이|가)?\s*붓[가-힣]*[^.?!\n]{0,40}입술\s*(?:이|가)?\s*따끔거[가-힣]*|입술\s*(?:이|가)?\s*(?:붓[가-힣]*|부(?:어|었|은)[가-힣]*|부어오르[가-힣]*)[^.?!\n]{0,40}(?:입[^\S\n]*안\s*(?:이|가)?\s*(?:따끔거|간질거|가려|얼얼)[가-힣]*|간질간질[가-힣]*)|삼키기\s*어려|넘기기\s*힘들|음식\s*알레르기)", "possible allergic reaction"),
 ]
 
 
