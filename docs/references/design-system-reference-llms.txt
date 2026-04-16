@@ -1,0 +1,6 @@
+Design system reference notes
+================================
+
+- Use calm, low-stress visual language for health-support interactions.
+- Emphasize readability, spacing, and clear call-to-action hierarchy.
+- Avoid alert-heavy UI unless safety triage requires escalation.

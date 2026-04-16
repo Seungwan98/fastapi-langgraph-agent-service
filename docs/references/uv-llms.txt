@@ -1,0 +1,5 @@
+uv reference notes
+==================
+
+- Keep this file for future Python environment or packaging notes using uv.
+- Current repository installation path is still documented with `pip install -r requirements.txt`.

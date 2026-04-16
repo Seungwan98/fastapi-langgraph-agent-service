@@ -1,0 +1,5 @@
+Nixpacks reference notes
+========================
+
+- Keep this file for deployment-platform notes if Nixpacks is adopted later.
+- Current primary deployment reference remains `docs/operations/deployment.md`.
