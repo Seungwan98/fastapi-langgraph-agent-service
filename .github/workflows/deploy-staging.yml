@@ -1,0 +1,24 @@
+name: Deploy Staging
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Deploy target
+        required: true
+        default: staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        run: |
+          echo "Deploying to ${{ github.event.inputs.environment }}..."
+          sleep 5
+          echo "Deploy success"
+      - name: Smoke test
+        run: |
+          echo "Running smoke test..."
+          echo "Smoke test passed"
