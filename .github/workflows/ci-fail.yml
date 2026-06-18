@@ -1,0 +1,15 @@
+name: CI (failure demo)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run unit tests
+        run: |
+          echo "Running payment tests..."
+          echo "payment.test.ts: 3 failed"
+          exit 1
